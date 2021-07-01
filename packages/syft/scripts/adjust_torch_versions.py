@@ -37,7 +37,8 @@ def main(path_req: str, torch_version: str, gpu: str = "cpu") -> None:
             lib_version = version.parse(dep_version)
             if system != "Darwin":
                 if gpu == "cpu":
-                    dep_version += "+cpu"  # linux and windows require +cpu
+                    # dep_version += "+cpu"  # linux and windows require +cpu
+                    pass
             replace = f"{lib}=={dep_version}\n"
 
         if (
