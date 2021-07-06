@@ -54,7 +54,7 @@ parser.set_defaults(use_test_config=False)
 if __name__ == "__main__":
     args = parser.parse_args()
 
-    app = create_app(args)
+    app = create_app(args, debug=True)
     _address = "http://{}:{}".format(args.host, args.port)
 
     server = pywsgi.WSGIServer(
